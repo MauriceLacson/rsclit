@@ -22,3 +22,10 @@ Route::get('/phpinfo', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('app', function()
+{
+	return view('layouts.app');
+});
+
+Route::get('form', 'RsclitformController@form')->name('form');
